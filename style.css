@@ -21,3 +21,20 @@ h1{
     background-color: #444;
     transition: background-color 0.3s;
 }
+#botoes button{
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#btnvermelho {background-color: #ff4c4c;}
+#btnamarelo {background-color: #ffd633;}
+#btnverde {background-color: #5cd65c;}
+#btnAuto {background-color: #ccc;}
+#btnStop {background-color: limegreen;}
+
+.acesa.vermelha {background-color: #ff4c4c;}
+.acesa.amarela {background-color: #ffd633;}
+.acesa.verde {background-color: #5cd65c;}
