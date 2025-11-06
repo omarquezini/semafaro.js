@@ -1,6 +1,6 @@
 //Seleciona as luses
 
-const luzVermelha = document.getElementById("Vermelho");
+const luzVermelho = document.getElementById("Vermelho");
 const luzAmarela = document.getElementById("Amarela");
 const luzVerde = document.getElementById("Verde");
 
@@ -29,7 +29,7 @@ function acenderVermelho(){
 
 function acenderAmarelo(){
     limpar()
-    luzAmarela.classList.add("acesa", "amarela");
+    luzAmarela.classList.add("acesa", "amarelo");
 
 }
 function acenderVerde(){
@@ -37,3 +37,27 @@ function acenderVerde(){
     luzVermelho.classList.add("acesa", "verde");
 
 }
+ function modoaltomatico(){
+    limpar();
+    let estado = 0;
+    intervalo = setInterval(()=>{
+        if(estado === 0 ) acenderVermelho();
+        if(estado === 1 ) acenderAmarelo();
+        if(estado === 2 ) acenderVerde();
+        estado = (estado + 1) % 3;
+     }, 1000)
+ }
+ function stop(){
+    clearInterval(intervalo);
+    limpar();
+ }
+
+ btnStop.onclick = stop;
+
+function vermelho(){
+    clearInterval(intervalo);
+    limpar();
+
+}
+
+btnvermelho.onclick = luzvermelho;
