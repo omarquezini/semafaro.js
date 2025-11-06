@@ -17,14 +17,14 @@ const btnStop = document.getElementById("btnStop");
 let intervalo;
 
 function limpar(){
-    luzVermelha.className = 'luz';
+    luzVermelho.className = 'luz';
     luzAmarela.className = 'luz';
     luzVerde.className = 'luz';
 }
 
 function acenderVermelho(){
     limpar();
-    luzVermelha.classList.add("acesa", "vermelha");
+    luzVermelho.classList.add("acesa", "vermelha");
 }
 
 function acenderAmarelo(){
@@ -53,11 +53,7 @@ function acenderVerde(){
  }
 
  btnStop.onclick = stop;
-
-function vermelho(){
-    clearInterval(intervalo);
-    limpar();
-
-}
-
-btnvermelho.onclick = luzvermelho;
+ btnAuto.onclick = modoaltomatico;
+ btnverde.onclick = acenderVerde;
+ btnvermelho.onclick = acenderVermelho;
+ btnamarelo.onclick = acenderAmarelo;
